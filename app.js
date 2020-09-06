@@ -12,7 +12,7 @@ import { db } from './models/index.js';
       useUnifiedTopology: true,
     });
   } catch (error) {
-    console.error(error);
+    console.error(`Error mongo connect: ${error}`);
     process.exit();
   }
 })();
