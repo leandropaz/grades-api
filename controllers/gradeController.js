@@ -43,7 +43,7 @@ const findOne = async (req, res) => {
   const { id } = req.params;
   try {
     logger.info(`GET /grade - ${id}`);
-    const data = await Grade.findOne({ name: condition });
+    const data = await Grade.findOne({ _id: id });
     if (!data) {
       res.status(404).json({ message: 'Registro não encontrado!' });
     } else {
