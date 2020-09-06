@@ -5,7 +5,7 @@ import Grade from './gradesModel.js';
 dotenv.config();
 const db = {};
 db.mongoose = mongoose;
-db.url = process.env.LOCAL;
+db.url = process.env.MONGODB;
 db.grade = Grade;
 
 export { db };
